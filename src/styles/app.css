@@ -29,6 +29,12 @@
 	--color-form-fg: var(--color-off-black);
 	--color-border: var(--color-gray-light);
 	--color-selection: var(--color-gray-light);
-  --color-highlight: var(--color-yellow);
-	
+  --color-highlight: transparent;
+}
+
+mark { 
+	background: transparent;
+	font-weight: bold;
+	color: var(--color-purple);
+	padding: 0;
 }
