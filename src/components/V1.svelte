@@ -1,16 +1,17 @@
 <script>
   import data from "$data/small.csv";
-  import { scalePow, extent, format } from "d3";
+  import { scalePow, extent, format, descending } from "d3";
+  import viewport from "$stores/viewport.js";
 
   const phrases = ["does size matter", "does size really matter"];
 
-  const markup = ({ lower, really }) => {
+  const markup = ({ lower, really, href }) => {
     const phrase = really ? phrases[1] : phrases[0];
     const start = lower.indexOf(phrase);
     const end = start + phrase.length;
     const before = lower.substring(0, start);
     const after = lower.substring(end, lower.length);
-    return `${before}<mark>${phrase}</mark>${after}`;
+    return `${before}<a href="${href}" target="_blank">${phrase}</a>${after}`;
   };
 
   const papers = data
@@ -28,16 +29,24 @@
       markup: markup(d)
     }));
 
+  papers.sort((a, b) => descending(a.citations, b.citations));
   const extents = extent(papers.map((d) => d.citations));
 
-  const fontScale = scalePow().exponent(0.25).domain(extents).range([12, 48]);
+  $: min = $viewport.width < 1200 ? ($viewport.width < 600 ? 12 : 14) : 16;
+  $: max = $viewport.width < 1200 ? ($viewport.width < 600 ? 24 : 32) : 48;
+  $: fontScale = scalePow().exponent(0.25).domain(extents).range([min, max]);
 </script>
 
 <section id="chart">
   <div>
-    {#each papers as { lower, citations, markup }}
-      <p class="paper" style="font-size: {Math.round(fontScale(citations))}px;">
-        🍆 {@html markup}
+    {#each papers as { lower, citations, markup, tag }}
+      <p
+        class="paper"
+        class:hi={tag === "true"}
+        style="font-size: {Math.round(fontScale(citations))}px;"
+      >
+        <span>🍆</span>
+        {@html markup}
       </p>
     {/each}
   </div>
@@ -47,7 +56,6 @@
 <style>
   #chart {
     margin: 2rem auto;
-    padding: 2em;
   }
 
   div {
@@ -55,21 +63,33 @@
   }
 
   .paper {
-    /* white-space: nowrap; */
-    /* text-align: center; */
-    line-height: 1.65;
+    line-height: 1.5;
     display: inline;
-    padding: 0.125em;
+    padding: 0.25em;
     margin: 0;
-    color: var(--color-gray-dark);
+    color: var(--color-off-black);
   }
 
   .paper:nth-of-type(even) {
-    background: var(--color-off-white);
+    background: var(--color-purple-white);
+    color: var(--color-purple-dark);
   }
 
   .paper:hover {
-    background: var(--color-gray-light);
+    background: var(--color-purple-light);
     color: var(--color-black);
+  }
+
+  .hi {
+    background: var(--color-green) !important;
+  }
+
+  :global(.paper a) {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  :global(.paper a:hover) {
+    border-bottom: 3px solid currentColor;
   }
 </style>

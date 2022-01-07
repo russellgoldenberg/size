@@ -4,7 +4,7 @@
 </script>
 
 <section id="intro">
-  <h1>academia’s curious fixation with this platitudinous phallic phrase</h1>
+  <h1>academia's curious fixation with this platitudinous phallic phrase</h1>
 
   <details>
     <summary>why am i looking at this? 👀</summary>
@@ -17,8 +17,9 @@
   </details>
 
   <p>
-    presented below are the 1,004 papers from google scholar with the title
-    <mark>does size (really) matter?</mark>. bigger font means...more citations.
+    <mark>"does size (really) matter?"</mark> is in the title of 1,004 papers on
+    <a href="https://scholar.google.com/" target="_blank">google scholar</a>. only eight are about
+    male anatonmy. bigger font means... more citations.
   </p>
 </section>
 

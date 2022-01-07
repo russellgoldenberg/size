@@ -21,20 +21,29 @@
 		"white": {
 			"value": "#ffffff"
 		},
+		"purple-dark": {
+			"value": "#38124a"
+		},
 		"purple": {
-			"value": "#a239ca"
+			"value": "#9932CC"
+		},
+		"purple-light": {
+			"value": "#ebd6f5"
+		},
+		"purple-white": {
+			"value": "#f5eafa"
 		},
 		"blue": {
 			"value": "#4717f6"
 		},
 		"green": {
-			"value": "#34a29e"
+			"value": "#7FFFD4"
 		},
 		"red": {
 			"value": "#ff533d"
 		},
 		"yellow": {
-			"value": "#e5e338"
+			"value": "#FFFACD"
 		}
 	}
 }

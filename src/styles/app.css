@@ -38,3 +38,7 @@ mark {
 	color: var(--color-purple);
 	padding: 0;
 }
+
+main {
+	padding: 0 1.5em;
+}
