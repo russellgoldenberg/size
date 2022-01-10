@@ -11,12 +11,11 @@
     <p>
       i was doing "real" research on google scholar when a paper grabbed my attention with a very
       dubious usage of "does size matter?" i thought that was strange, so I searched to see if how
-      common it was. sure enough, i found over 1,000 results in the past 20 years or so, mostly not
-      about male anatomy.
+      common it was.
     </p>
     <p>
-      There has been particular emphasis in western culture in the past century around this topic.
-      According to <a
+      there has been particular emphasis in western culture in the past century around this topic.
+      according to <a
         href="https://psycnet.apa.org/doiLanding?doi=10.1037%2F1524-9220.7.3.129"
         target="_blank">one study</a
       > below, "popular media, especially TV and men's magazines, frequently emphasize the connection
@@ -28,7 +27,9 @@
       A <a
         href="https://books.google.com/ngrams/graph?content=does+size+matter&year_start=1500&year_end=2019&corpus=26&smoothing=3&direct_url=t1%3B%2Cdoes%20size%20matter%3B%2Cc0#t1%3B%2Cdoes%20size%20matter%3B%2Cc1"
         target="_blank">google ngram</a
-      > query also paints the same picture, with the first occurence in the early 1900s.
+      > query also paints the same picture, with the first occurence in the early 1900s. Its prevelance
+      in the male pysche and public discouse is visible in the numerous attempts of playful paper titles.
+      sure enough, i found over 1,000 results in the past 20 years or so, rarely about male anatomy.
     </p>
   </details>
 
