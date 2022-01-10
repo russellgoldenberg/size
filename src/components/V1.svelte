@@ -80,10 +80,6 @@
     color: var(--color-black);
   }
 
-  .hi {
-    background: var(--color-green) !important;
-  }
-
   :global(.paper a) {
     text-decoration: none;
     font-weight: bold;

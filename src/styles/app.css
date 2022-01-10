@@ -42,3 +42,7 @@ mark {
 main {
 	padding: 0 1.5em;
 }
+
+.hi {
+	background: var(--color-green) !important;
+}
