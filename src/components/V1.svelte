@@ -45,7 +45,7 @@
         class:hi={tag === "true"}
         style="font-size: {Math.round(fontScale(citations))}px;"
       >
-        <span>🍆</span>
+        <!-- <span>🍆</span> -->
         {@html markup}
       </p>
     {/each}
